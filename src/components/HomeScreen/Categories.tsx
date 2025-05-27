@@ -63,15 +63,12 @@ const Categories: React.FC = () => {
             <SwiperSlide key={item.id} className="!h-auto">
               <div
                 onClick={() => handleCategoryClick(item.title)}
-                className={`w-full h-72 rounded-2xl shadow-lg flex flex-col justify-center items-center p-6 transition-all duration-300 cursor-pointer hover:scale-105 ${
+                className={`w-full h-72 rounded-2xl shadow-lg flex flex-col justify-center items-center p-6 transition-all duration-300 cursor-grabbing hover:scale-105 ${
                   selectedCategory === item.title
                     ? 'ring-4 ring-yellow-400 bg-white shadow-xl'
                     : 'bg-white hover:shadow-xl'
                 }`}
-                style={{
-                  // touchAction: 'pan-y pinch-zoom',
-                  userSelect: 'none'
-                }}
+              
               >
                 <div className="w-24 h-24 mb-4 flex items-center justify-center">
                   <img
@@ -119,8 +116,8 @@ const Categories: React.FC = () => {
       {/* Selected Category Items */}
       {selectedItems && (
         <div className="mt-8 md:mt-12 w-full max-w-2xl bg-white rounded-3xl p-6 md:p-8 shadow-2xl border border-yellow-200 transition-all animate-fade-in mx-4">
-          <h2 className="text-2xl md:text-3xl font-bold text-center mb-6 text-pink-600 font-['Comic_Relief']">
-            {selectedCategory} Box 🍬
+          <h2 className="text-xl md:text-3xl font-bold text-center mb-6 text-pink-600 font-['Comic_Relief']">
+            {selectedCategory} Combo
           </h2>
           <ul className="list-disc list-inside space-y-2 text-gray-700 text-base md:text-lg font-['Nunito']">
             {selectedItems.items.map((item, index) => (

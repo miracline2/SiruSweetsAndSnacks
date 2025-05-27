@@ -60,7 +60,7 @@ export const categoriesList = [
       'Amman puram kara sevu',
       'Chips',
       'Kara boondi',
-      'Pal muruku',
+      'ThengaiPal muruku',
       'Muruku',
       'Thattai',
     ],
